@@ -4,9 +4,8 @@ A comprehensive full-stack web application for eco-friendly delivery management 
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Deployed on Vercel/Netlify](your-frontend-url)
-- **Backend API**: [Deployed on Render/Railway](your-backend-url)
-- **API Documentation**: [Swagger/OpenAPI Docs](your-api-docs-url)
+- **Frontend**: [Deployed on Vercel/Netlify](https://greencart-logistics-1-315k.onrender.com)
+- **Backend API**: [Deployed on Render/Railway](https://greencart-logistics-ajfc.onrender.com)
 
 ## 📋 Project Overview
 
@@ -53,7 +52,7 @@ GreenCart Logistics is a fictional eco-friendly delivery company operating in ur
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/greencart-logistics.git
+git clone https://github.com/grimbit1/greencart-logistics.git
 cd greencart-logistics
 ```
 
@@ -283,7 +282,7 @@ Authorization: Bearer <token>
 
 For support and questions:
 - Create an issue in the GitHub repository
-- Contact: [your-email@domain.com]
+- Contact: [adityanandwana19@gmail.com](mailto:adityanandwana19@gmail.com)
 
 ## 📄 License
 
@@ -300,7 +299,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **GreenCart Logistics** - Making eco-friendly delivery management efficient and profitable! 🌱🚚
 
-
-Deployed links:
-- **Frontend**: [https://greencart-logistics-1-315k.onrender.com](https://greencart-logistics-1-315k.onrender.com)
-- **Backend API**: [https://greencart-logistics-ajfc.onrender.com](https://greencart-logistics-ajfc.onrender.com)
