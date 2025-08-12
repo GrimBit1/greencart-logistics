@@ -299,3 +299,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **GreenCart Logistics** - Making eco-friendly delivery management efficient and profitable! 🌱🚚
+
+
+Deployed links:
+- **Frontend**: [https://greencart-logistics-1-315k.onrender.com](https://greencart-logistics-1-315k.onrender.com)
+- **Backend API**: [https://greencart-logistics-ajfc.onrender.com](https://greencart-logistics-ajfc.onrender.com)
