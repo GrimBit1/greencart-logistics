@@ -1,17 +1,18 @@
-import express, { NextFunction, Request, Response } from "express";
-import mongoose from "mongoose";
-import cors from "cors";
-import helmet from "helmet";
-import rateLimit from "express-rate-limit";
-import winston from "winston";
+const express = require("express");
+const { NextFunction, Request, Response } = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
+const winston = require("winston");
 require("dotenv").config();
 
 // Import routes
-import authRoutes from "./routes/auth";
-import driverRoutes from "./routes/drivers";
-import routeRoutes from "./routes/routes";
-import orderRoutes from "./routes/orders";
-import simulationRoutes from "./routes/simulation";
+const authRoutes = require("./routes/auth");
+const driverRoutes = require("./routes/drivers");
+const routeRoutes = require("./routes/routes");
+const orderRoutes = require("./routes/orders");
+const simulationRoutes = require("./routes/simulation");
 
 const app = express();
 
@@ -34,7 +35,7 @@ const logger = winston.createLogger({
 });
 
 // Custom request logger middleware
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use((req, res, next) => {
   logger.info(`${res.statusCode} ${req.method} ${req.url}`, {
     timestamp: new Date().toISOString(),
     ip: req.ip,
@@ -48,7 +49,7 @@ const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minutes
   max: 100, // limit each IP to 100 requests per windowMs
   message: "Too many requests from this IP, please try again later.",
-  skip: (req: Request) => {
+  skip: (req) => {
     // Skip rate limiting for health check endpoint
 
     return (
@@ -63,8 +64,7 @@ app.use(limiter);
 // CORS configuration
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    credentials: true,
+    origin: "*",
   })
 );
 
@@ -97,7 +97,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // Error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
     error: "Something went wrong!",
